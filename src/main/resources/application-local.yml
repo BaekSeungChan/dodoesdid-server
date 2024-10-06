@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  h2:
+    console:
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:~/test;
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.H2Dialect
+        show_sql: true
+        format_sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
